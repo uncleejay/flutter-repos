@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(10.0),
                       child: ListTile(
                         title: Text(snapshot.data.items[index]['name']),
-                        subtitle: Text(snapshot.data.items[index]['owner']),
+                        subtitle: Text(snapshot.data.items[index]['owner']['login']),
                       ),
                     ),
                   );

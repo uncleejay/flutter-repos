@@ -2,8 +2,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:github_repo_labs/model/repo.dart';
 
+//store the url in a string
 String url = 'https://api.github.com/search/repositories?q=flutter+language:dart';
 
+//create a get method
 Future<Repo> getRepo() async{
   final response = await http.get(url);
 

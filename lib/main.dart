@@ -53,7 +53,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               );
             } else if(snapshot.hasError){
-              return Text("${snapshot.error}");
+              return AlertDialog(
+                  title: new Text("Error"),
+                  content: new Text("Ooops Something went wrong"),
+                  actions: <Widget>[
+                    // usually buttons at the bottom of the dialog
+                    new FlatButton(
+                      child: new Text("Close"),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  ],
+              );
             }
             return CircularProgressIndicator();
           } ,
